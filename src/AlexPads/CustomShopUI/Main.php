@@ -7,19 +7,19 @@ namespace AlexPads\CustomShopUI;
 use pmmp\TesterPlugin\TestFailedException;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\item\Item;
-use pocketmine\item\ItemFactory;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Server;
 use pocketmine\utils\Config;
-use Vecnavium\FormsUI\SimpleForm;
+use AlexPads\CustomShopUI\libs\Vecnavium\FormsUI\SimpleForm;
 use pocketmine\utils\TextFormat as TF;
-use Vecnavium\FormsUI\CustomForm;
+use AlexPads\CustomShopUI\libs\Vecnavium\FormsUI\CustomForm;
 use JackMD\ConfigUpdater\ConfigUpdater;
 use AlexPads\CustomShopUI\economy\EconomyManager;
 use AlexPads\CustomShopUI\economy\EconomyIntegration;
+use pocketmine\item\LegacyStringToItemParser;
 
 class Main extends PluginBase
 {
@@ -213,7 +213,7 @@ class Main extends PluginBase
                 foreach ($items["Items"] as $cate => $item) {
                     $list = explode(":", $item);
                     if ($list[5] == "Default") {
-                        $name = ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], 1)->getName();
+                        $name = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->getName();
                     } else {
                         $name = $list[5];
                     }
@@ -291,7 +291,7 @@ class Main extends PluginBase
                 foreach ($items3["Items"] as $cate => $item) {
                     $list = explode(":", $item);
                     if ($list[5] == "Default") {
-                        $name = ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], 1)->getName();
+                        $name = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->getName();
                     } else {
                         $name = $list[5];
                     }
@@ -405,14 +405,14 @@ class Main extends PluginBase
                     }
                     $list = explode(":", $item1[$item]);
                 }
-                $name = ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], 1)->getName();
+                $name = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->getName();
                 $vars = ["{item}" => $name, "{cost}" => $list[4]];
                 foreach ($vars as $var => $replacement) {
                     $message = str_replace($var, $replacement, $message);
                 }
                 if ($this->getConfig()->getNested("Types.Toggle") == true) {
                     if ($this->getConfig()->getNested("Types.Input") == true) {
-                        $data1 = (int)$data[2];
+                        $data1 = ((int)$data[2] < 0) ? 0 : (int)$data[2];
                     }
                     if ($this->getConfig()->getNested("Types.Slider") == true) {
                         $data1 = $data[3];
@@ -438,9 +438,11 @@ class Main extends PluginBase
                                 }else{
                                     $inventory = $player->getInventory();
                                     if ($list[5] != "Default") {
-                                        $inventory->addItem(ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], $data1)->setCustomName($list[5]));
+                                        $item = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->setCount($data1)->setCustomName($list[5]);
+                                        $inventory->addItem($item);
                                     } elseif ($list[5] == "Default") {
-                                        $inventory->addItem(ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], $data1));
+                                        $item = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->setCount($data1);
+                                        $inventory->addItem($item);
                                     }
                                     $message = $msg->getNested("Messages.Paid_for");
                                     $vars = ["{amount}" => $data1, "{item}" => $name, "{cost}" => $list[3] * $data1];
@@ -463,8 +465,8 @@ class Main extends PluginBase
                     }
 
                     if ($data[1] == true) {
-                        if ($player->getInventory()->contains(ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], $data1)) === true) {
-                            $player->getInventory()->removeItem(ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], $data1));
+                        if ($player->getInventory()->contains(LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->setCount($data1)) === true) {
+                            $player->getInventory()->removeItem(LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->setCount($data1));
                             $economy = EconomyManager::get();
                             $economy->addMoney($player, $list[4] * $data1);
                             $message = $msg->getNested("Messages.Paid");
@@ -504,7 +506,7 @@ class Main extends PluginBase
                 }
                 $list = explode(":", $item1[$item]);
             }
-            $name = ItemFactory::getInstance()->get((int)$list[0], (int)$list[1], 1)->getName();
+            $name = LegacyStringToItemParser::getInstance()->parse("{$list[0]}:{$list[1]}")->getName();
             $vars = ["{item}" => $name, "{cost}" => $list[3], "{sell}" => $list[4]];
             foreach ($vars as $var => $replacement) {
                 $message = str_replace($var, $replacement, $message);
