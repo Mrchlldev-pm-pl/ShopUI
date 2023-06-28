@@ -4,8 +4,9 @@
 [![](https://poggit.pmmp.io/shield.dl.total/CustomShopUI)](https://poggit.pmmp.io/p/CustomShopUI)
 [![](https://poggit.pmmp.io/shield.dl/CustomShopUI)](https://poggit.pmmp.io/p/CustomShopUI)
 
+- **OPEN SOURCE, PLEASE HELP ON GITHUB, PULL REQUESTS ACCEPTED**
 - If you need PM3 Support please use Version 4.0.5!
-- PM5 Support
+- PM5 Support starting at 5.0.5
 - Easy to use shop.yml configuration!
 - Custom, Simple, Free, Active!, Updated!
 
@@ -40,7 +41,6 @@
 - This plugin works with both EconomyAPI & BedrockEconomy! 
     Make sure to change the plugin you are using in the config file!
 - any issues need to be reported on the github repo in the issues section.
-- We now once again offer an image index for the plugins and textures that are missing from the default PocketMine systems. https://minecraft-cdn.witherhosting.com we are hosting a live version of the default texture pack. You can use any files in the pack like /textures, /models, /map, etc... they all exist.
 
 ## Devs/Info
 
