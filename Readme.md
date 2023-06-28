@@ -5,7 +5,7 @@
 [![](https://poggit.pmmp.io/shield.dl/CustomShopUI)](https://poggit.pmmp.io/p/CustomShopUI)
 
 - If you need PM3 Support please use Version 4.0.5!
-- **PM4 Support starts at version 5.0.0!**
+- PM5 Support
 - Easy to use shop.yml configuration!
 - Custom, Simple, Free, Active!, Updated!
 
