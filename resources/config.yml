@@ -22,19 +22,19 @@ Thanks: false
 command_confirm: true
 
 # Turns on or off Multi Shop Support!
-Multi-Shop: true
+Multi-Shop: false
 
 # Default Shop for when the Player Runs the /shop command with no Arguments!
-Default-Shop: "Shop"
+Default-Shop: " §l§b»§r§7 [§bShops§7]"
 Titles:
   # adding these is simple just put exactly what you have in the shop.yml as the name and then title after it and then the name!
-  Default: "ShopUI" ## This is default for when you don't add the titles Below!
+  Default: " §l§b»§r§7 [§bShops§7]" ## This is default for when you don't add the titles Below!
   shoptitle: "ShopUI"
   viptitle: "Vip Shop"
 
 ## CustomShopUI Supports EconomyAPI and BedrockEconomy plugings to manage money! (default: BedrockEconomy)
 economy:
-  plugin: BedrockEconomy
+  plugin: EconomyAPI
 
 Types:
   Toggle: true #it is NOT recommended to change this! (Changing this means the Plugin wont work This will be Fixed in a few years at this rate!)
