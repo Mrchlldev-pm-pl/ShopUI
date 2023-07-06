@@ -25,10 +25,10 @@ command_confirm: true
 Multi-Shop: false
 
 # Default Shop for when the Player Runs the /shop command with no Arguments!
-Default-Shop: " §l§b»§r§7 [§bShops§7]"
+Default-Shop: "shop"
 Titles:
   # adding these is simple just put exactly what you have in the shop.yml as the name and then title after it and then the name!
-  Default: " §l§b»§r§7 [§bShops§7]" ## This is default for when you don't add the titles Below!
+  Default: "ShopUI" ## This is default for when you don't add the titles Below!
   shoptitle: "ShopUI"
   viptitle: "Vip Shop"
 
