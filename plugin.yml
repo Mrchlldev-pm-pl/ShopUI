@@ -1,11 +1,11 @@
 ---
-name: CustomShopUI
+name: ShopUI
 version: 5.0.5
 main: AlexPads\CustomShopUI\Main
 api: 5.0.0
 commands:
  shop:
-  description: Opens the CustomShopUI
+  description: Opens the ShopUI
   usage: "/shop"
   permission: shop.shop
 permissions:
