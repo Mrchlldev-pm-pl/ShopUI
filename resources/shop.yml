@@ -34,10 +34,10 @@ shop-version: 5
 # MUST be all Lowercase! RECOMMENDED TO KEEP THIS YOUR DEFAULT SHOP!
 shop: # if you want the shop to have a custom name you must add the options in the Config.yml file if now it will default to ShopUI
   0: #must start at 0 and go up by one with every new category you make.
-    Name: "Senjata & Peralatan:textures/items/stone_sword" #Can use Custom Colors in the Names using the "§" Symbol
+    Name: "Tools:textures/items/stone_sword" #Can use Custom Colors in the Names using the "§" Symbol
     Sub:
       0:
-        Name: "Pedang:textures/items/stone_sword"
+        Name: "Sword Tools:textures/items/stone_sword"
         Items:
           - "268:0:1:250:0:Default:textures/items/wood_sword"
           - "272:0:1:500:0:Default:textures/items/stone_sword"
@@ -45,12 +45,12 @@ shop: # if you want the shop to have a custom name you must add the options in t
           - "276:0:1:3500:0:Default:textures/items/diamond_sword"
           - "cmd:Sharpness III:100:Console:enchant {player} protection 3:textures/items/stone_sword"
       1:
-        Name: "Panah:textures/items/bow_pulling_2"
+        Name: "Bow Tools:textures/items/bow_pulling_2"
         Items:
           - "261:0:1:500:0:Default:textures/items/bow_pulling_2"
           - "262:0:1:2:0:Default:textures/items/arrow"
       2:
-        Name: "Beliung:textures/items/diamond_pickaxe"
+        Name: "Pickaxe Tools:textures/items/diamond_pickaxe"
         Items:
           - "278:0:1:2500:0:Default:textures/items/diamond_pickaxe"
           - "285:0:1:2000:0:Default:textures/items/gold_pickaxe"
@@ -58,14 +58,21 @@ shop: # if you want the shop to have a custom name you must add the options in t
           - "274:0:1:550:0:Default:textures/items/stone_pickaxe"
           - "270:0:1:100:0:Default:textures/items/wood_pickaxe"
       3:
-        Name: "Kapak:textures/items/diamond_axe"
+        Name: "Axe Tools:textures/items/diamond_axe"
         Items:
-          - "271:0:1:200:0:Default:textures/items/wood_axe"
-          - "275:0:1:200:0:Default:textures/items/stone_axe"
-          - "258:0:1:200:0:Default:textures/items/iron_axe"
-          - "279:0:1:200:0:Default:textures/items/diamond_axe"
+          - "271:0:1:2500:0:Default:textures/items/wood_axe"
+          - "275:0:1:2500:0:Default:textures/items/stone_axe"
+          - "258:0:1:2500:0:Default:textures/items/iron_axe"
+          - "279:0:1:2500:0:Default:textures/items/diamond_axe"
+      3:
+        Name: "Hoe Tools:textures/items/diamond_hoe"
+        Items:
+          - "404:0:1:2500:0:Default:textures/items/wood_hoe"
+          - "405:0:1:2500:0:Default:textures/items/stone_hoe"
+          - "406:0:1:2500:0:Default:textures/items/iron_hoe"
+          - "407:0:1:2500:0:Default:textures/items/diamond_hoe"
   1:
-    Name: "Perlengkapan Zirah:textures/items/diamond_chestplate"
+    Name: "Armor:textures/items/diamond_chestplate"
     Sub:
       0:
         Name: "Leather:textures/items/leather_chestplate"
@@ -142,7 +149,7 @@ shop: # if you want the shop to have a custom name you must add the options in t
           - "35:14:64:25:1.75:Red Wool:https://minecraft-cdn.witherhosting.com/textures/items/white_wool.png"
           - "35:15:64:25:1.75:Black Wool:https://minecraft-cdn.witherhosting.com/textures/items/white_wool.png"
   3:
-    Name: "Makanan:textures/items/apple"
+    Name: "Feed:textures/items/apple"
     Items:
       - "466:0:1:50000:0:Default:https://minecraft-cdn.witherhosting.com/textures/items/enchanted_golden_apple.png"
       - "322:0:1:15000:0:Default:textures/items/apple_golden"
@@ -151,7 +158,7 @@ shop: # if you want the shop to have a custom name you must add the options in t
       - "320:0:16:6:0:Default:textures/items/porkchop_cooked"
       - "424:0:16:5:1:Default:textures/items/mutton_cooked"
   4:
-    Name: "Pertanian:textures/items/stone_hoe"
+    Name: "Farm:textures/items/stone_hoe"
     Items:
       - "291:0:1:100:1:Default:textures/items/stone_hoe"
       - "351:15:32:20:1.75:Default:/textures/items/ink_sac"
@@ -162,7 +169,7 @@ shop: # if you want the shop to have a custom name you must add the options in t
       - "391:0:32:5:1:Default:textures/items/carrot"
       - "392:0:32:5:1:Default:textures/items/potato"
   5:
-    Name: "Lainnya:textures/items/bucket_lava"
+    Name: "Others:textures/items/bucket_lava"
     Items:
       - "50:0:16:10:2.5:Default:textures/blocks/torch_on"
       - "46:0:16:500:1.5:Default:textures/blocks/tnt_side"
@@ -170,7 +177,7 @@ shop: # if you want the shop to have a custom name you must add the options in t
       - "325:8:1:5000:5:Default:textures/items/bucket_water"
       - "218:0:1:5000:1:Default:textures/items/shulker_shell"
   6:
-    Name: "Biji Pertambangan:textures/items/diamond"
+    Name: "Ores:textures/items/diamond"
     Items:
       - "264:0:12:80:2.5:Default:textures/items/diamond"
       - "265:0:10:50:2.5:Default:textures/items/iron_ingot"
@@ -179,17 +186,6 @@ shop: # if you want the shop to have a custom name you must add the options in t
       - "263:0:10:25:1.75:Default:textures/items/coal"
       - "351:4:10:1000:1.5:Default:textures/items/lapis_lazuli"
       - "331:0:10:25:3:Default:textures/items/redstone"
-  7:
-    Name: "Spawn:textures/blocks/mob_spawner"
-    Items:
-      - "52:0:1:100000:50000:Default:textures/blocks/mob_spawner"
-      - "383:33:1:15000:5000:Default:textures/items/spawn_egg"
-      - "383:34:1:20000:8000:Default:textures/items/spawn_egg"
-      - "383:35:1:15000:6000:Default:textures/items/spawn_egg"
-      - "383:43:1:23000:10000:Default:textures/items/spawn_egg"
-      - "369:0:64:50:3.5:Default:textures/items/blaze_rod"
-      - "352:0:64:50:2.75:Default:textures/items/bone"
-      - "262:0:64:50:1.75:Default:textures/items/arrow"
 vip: # if you want the shop to have a custom name you must add the options in the Config.yml file if now it will default to ShopUI
   0: #must start at 0 and go up by one with every new category you make.
     Name: "Vip Weapons / Tools:textures/items/stone_sword" #Can use Custom Colors in the Names using the "§" Symbol
