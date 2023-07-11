@@ -1,0 +1,188 @@
+## DO NOT TOUCH (This is for Updates only!)
+shop-version: 5
+# DO NOT TOUCH ^^^^^
+
+#Command Example!!!
+#======================================================================================================
+# Commands:
+#
+#
+#    - "cmd:Sharpness III:100:Console:enchant {player} protection 3:textures/items/stone_sword"
+#            NAME^^^ Price^^^ TYPE^^^            COMMAND^^^^^             PICTURE^^^^^^^
+#
+# Items:
+#
+#   - "268:0:1:250:0:Default:textures/items/wood_sword"
+#
+#   - "ID:META:NUMBER:PRICE(PER ITEM THEY BUY):SELL(PER ITEM THEY SELL):NAME(Defalut OR Custom with §):Picture"
+#
+######## IMPORTANT #########
+#
+#  Next Update Finishes Enchants (Can be Done with Commands!)
+#
+#  NEW!!! We have a Minecraft Texture Library on our Website!
+#         Go to: https://minecraft-cdn.witherhosting.com/textures/ after that add the item like this:
+#                   https://minecraft-cdn.witherhosting.com/textures/blocks/tnt_side.png (You can Send us .png files and we will add them!)
+#                          That would Look like this in use!
+#
+#   - "268:0:1:250:0:Default:https://minecraft-cdn.witherhosting.com/textures/blocks/tnt_side.png"
+#
+#
+# Developer: AlexPads
+#======================================================================================================
+
+# MUST be all Lowercase! RECOMMENDED TO KEEP THIS YOUR DEFAULT SHOP!
+shop: # if you want the shop to have a custom name you must add the options in the Config.yml file if now it will default to ShopUI
+  0: #must start at 0 and go up by one with every new category you make.
+    Name: "Tools:textures/items/stone_sword" #Can use Custom Colors in the Names using the "§" Symbol
+    Sub:
+      0:
+        Name: "Sword Tools:textures/items/stone_sword"
+        Items:
+          - "268:0:1:250:0:Default:textures/items/wood_sword"
+          - "272:0:1:500:0:Default:textures/items/stone_sword"
+          - "267:0:1:2000:0:Default:textures/items/iron_sword"
+          - "276:0:1:3500:0:Default:textures/items/diamond_sword"
+          - "cmd:Sharpness III:100:Console:enchant {player} protection 3:textures/items/stone_sword"
+      1:
+        Name: "Bow Tools:textures/items/bow_pulling_2"
+        Items:
+          - "261:0:1:500:0:Default:textures/items/bow_pulling_2"
+          - "262:0:1:2:0:Default:textures/items/arrow"
+      2:
+        Name: "Pickaxe Tools:textures/items/diamond_pickaxe"
+        Items:
+          - "278:0:1:2500:0:Default:textures/items/diamond_pickaxe"
+          - "285:0:1:2000:0:Default:textures/items/gold_pickaxe"
+          - "257:0:1:1000:0:Default:textures/items/iron_pickaxe"
+          - "274:0:1:550:0:Default:textures/items/stone_pickaxe"
+          - "270:0:1:100:0:Default:textures/items/wood_pickaxe"
+      3:
+        Name: "Axe Tools:textures/items/diamond_axe"
+        Items:
+          - "271:0:1:2500:0:Default:textures/items/wood_axe"
+          - "275:0:1:2500:0:Default:textures/items/stone_axe"
+          - "258:0:1:2500:0:Default:textures/items/iron_axe"
+          - "279:0:1:2500:0:Default:textures/items/diamond_axe"
+      3:
+        Name: "Hoe Tools:textures/items/diamond_hoe"
+        Items:
+          - "290:0:1:2500:0:Default:textures/items/wood_hoe"
+          - "291:0:1:2500:0:Default:textures/items/stone_hoe"
+          - "292:0:1:2500:0:Default:textures/items/iron_hoe"
+          - "293:0:1:2500:0:Default:textures/items/diamond_hoe"
+  1:
+    Name: "Armor:textures/items/diamond_chestplate"
+    Sub:
+      0:
+        Name: "Leather:textures/items/leather_chestplate"
+        Items:
+          - "298:0:1:10000:0:Default:textures/items/leather_helmet"
+          - "299:0:1:10000:0:Default:textures/items/leather_chestplate"
+          - "300:0:1:10000:0:Default:textures/items/leather_leggings"
+          - "301:0:1:10000:0:Default:textures/items/leather_boots"
+      1:
+        Name: "ChainMail:textures/items/chainmail_chestplate"
+        Items:
+          - "302:0:1:15000:0:Default:textures/items/chainmail_helmet"
+          - "303:0:1:15000:0:Default:textures/items/chainmail_chestplate"
+          - "304:0:1:15000:0:Default:textures/items/chainmail_leggings"
+          - "305:0:1:15000:0:Default:textures/items/chainmail_boots"
+      2:
+        Name: "Iron:textures/items/iron_chestplate"
+        Items:
+          - "306:0:1:17000:0:Default:textures/items/iron_helmet"
+          - "307:0:1:17000:0:Default:textures/items/iron_chestplate"
+          - "308:0:1:17000:0:Default:textures/items/iron_leggings"
+          - "309:0:1:17000:0:Default:textures/items/iron_boots"
+      3:
+        Name: "Gold:textures/items/gold_chestplate"
+        Items:
+          - "314:0:1:12000:0:Default:textures/items/gold_helmet"
+          - "315:0:1:12000:0:Default:textures/items/gold_chestplate"
+          - "316:0:1:12000:0:Default:textures/items/gold_leggings"
+          - "317:0:1:12000:0:Default:textures/items/gold_boots"
+      4:
+        Name: "Diamond:textures/items/diamond_chestplate"
+        Items:
+          - "310:0:1:25000:0:Default:textures/items/diamond_helmet"
+          - "311:0:1:25000:0:Default:textures/items/diamond_chestplate"
+          - "312:0:1:25000:0:Default:textures/items/diamond_leggings"
+          - "313:0:1:25000:0:Default:textures/items/diamond_boots"
+  2:
+    Name: "Block:textures/blocks/stone"
+    Sub:
+      0:
+        Name: "Building:textures/blocks/cobblestone"
+        Items:
+          - "4:0:64:50:2:Default:textures/blocks/cobblestone"
+          - "3:0:64:50:1:Default:textures/blocks/dirt"
+          - "1:0:64:12:5:Default:textures/blocks/stone"
+          - "17:0:64:12:2:Default:textures/blocks/log_oak"
+          - "20:0:64:25:2:Default:textures/blocks/glass"
+          - "24:0:64:15:2:Default:textures/blocks/sandstone_normal"
+          - "98:0:64:15:2:Default:textures/blocks/stonebrick"
+          - "155:0:64:15:2:Default:textures/blocks/quartz_block_side"
+          - "88:0:64:20:5:Default:textures/blocks/snow"
+          - "44:0:64:25:3:Default:textures/blocks/stone_slab_side"
+          - "47:0:64:15:2:Default:textures/blocks/bookshelf"
+          - "45:0:64:15:2:Default:textures/blocks/brick"
+          - "87:0:64:15:1:Default:textures/blocks/nether_brick"
+          - "49:0:64:25:3:Default:textures/blocks/obsidian"
+      1:
+        Name: "Wools:textures/blocks/wool_colored_white"
+        Items:
+          - "35:0:64:25:1.75:White Wool:textures/blocks/wool_colored_white"
+          - "35:1:64:25:1.75:Orange Wool:textures/blocks/wool_colored_orange"
+          - "35:2:64:25:1.75:Magenta Wool:textures/blocks/wool_colored_magenta"
+          - "35:3:64:25:1.75:Light Blue Wool:textures/blocks/wool_colored_light_blue"
+          - "35:4:64:25:1.75:Yellow Wool:textures/blocks/wool_colored_yelloe"
+          - "35:5:64:25:1.75:Lime Wool:textures/blocks/wool_colored_lime"
+          - "35:6:64:25:1.75:Pink Wool:textures/blocks/wool_colored_pink"
+          - "35:7:64:25:1.75:Gray Wool:textures/blocks/wool_colored_gray"
+          - "35:8:64:25:1.75:Light Gray Wool:textures/blocks/wool_colored_gray"
+          - "35:9:64:25:1.75:Cyan Wool:textures/blocks/wool_colored_cyan"
+          - "35:10:64:25:1.75:Purple Wool:textures/blocks/wool_colored_purple"
+          - "35:11:64:25:1.75:Blue Wool:textures/blocks/wool_colored_blue"
+          - "35:12:64:l:1.5:Brown Wool:textures/blocks/wool_colored_brown"
+          - "35:13:64:25:1.75:Green Wool:textures/blocks/wool_colored_green"
+          - "35:14:64:25:1.75:Red Wool:textures/blocks/wool_colored_red"
+          - "35:15:64:25:1.75:Black Wool:textures/blocks/wool_colored_black"
+  3:
+    Name: "Feed:textures/items/apple"
+    Items:
+      - "466:0:1:500000:0:Enchanted Golden Apple:textures/items/golden_apple.png"
+      - "322:0:1:150000:0:Default:textures/items/apple_golden"
+      - "396:0:1:100000:0:Default:textures/items/carrot_golden"
+      - "364:0:16:500:0:Default:textures/items/beef_cooked"
+      - "320:0:16:600:0:Default:textures/items/porkchop_cooked"
+      - "424:0:16:500:1:Default:textures/items/mutton_cooked"
+  4:
+    Name: "Farm:textures/items/stone_hoe"
+    Items:
+      - "291:0:1:100:1:Default:textures/items/stone_hoe"
+      - "351:15:32:200:0:Default:/textures/items/ink_sac"
+      - "296:0:12:100:20:Default:textures/items/seeds_wheat"
+      - "338:0:32:100:20:Default:textures/items/sugar"
+      - "362:0:32:100:50:Default:textures/items/seeds_melon"
+      - "361:0:32:100:20:Default:textures/items/seeds_pumpkin"
+      - "391:0:32:50:10:Default:textures/items/carrot"
+      - "392:0:32:5:1:Default:textures/items/potato"
+  5:
+    Name: "Others:textures/items/bucket_lava"
+    Items:
+      - "50:0:16:100:2.5:Default:textures/blocks/torch_on"
+      - "46:0:16:5000:1.5:Default:textures/blocks/tnt_side"
+      - "325:10:1:5000:5:Default:textures/items/bucket_lava"
+      - "325:8:1:5000:5:Default:textures/items/bucket_water"
+      - "218:0:1:5000:1:Default:textures/items/shulker_shell"
+  6:
+    Name: "Ores:textures/items/diamond"
+    Items:
+      - "264:0:12:80:2.5:Default:textures/items/diamond"
+      - "265:0:10:50:2.5:Default:textures/items/iron_ingot"
+      - "266:0:10:50:2.5:Default:textures/items/gold_ingot"
+      - "388:0:10:100:2.5:Default:textures/items/emerald"
+      - "263:0:10:25:1.75:Default:textures/items/coal"
+      - "351:4:10:1000:1.5:Default:textures/items/lapis_lazuli"
+      - "331:0:10:25:3:Default:textures/items/redstone"
